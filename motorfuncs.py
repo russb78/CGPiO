@@ -70,6 +70,14 @@ def end():
     r_p.stop()
     GPIO.cleanup()
 
+def go(x):
+    """Move the robot forward at x speed indefinitely"""
+    GPIO.output(in1_pin, True) 
+    GPIO.output(in2_pin, False) 
+    GPIO.output(in3_pin, True) 
+    GPIO.output(in4_pin, False) 
+    speed(x)
+
 def go_forward(x, y): 
     """Move the robot forward at x speed (0-100) for y seconds"""
     GPIO.output(in1_pin, True) 
