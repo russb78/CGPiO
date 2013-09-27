@@ -7,21 +7,21 @@ This is all pretty new to me, so if you've got any tips/advice drop me a line!
 #########################
 
 THEORY:
-Wheel diameter: 42mm
-Wheel circumference: (42*3.14) = 131.88mm (13.19cm per revolution).
-Motor RPM (50:1 micro motor @6v) = 250rpm
-4.16 revolutions per second = 54.87cm per second - approx 1 meter every 2 seconds. 
+* Wheel diameter: 42mm
+* Wheel circumference: (42*3.14) = 131.88mm (13.19cm per revolution).
+* Motor RPM (50:1 micro motor @6v) = 250rpm
+* 4.16 revolutions per second = 54.87cm per second - approx 1 meter every 2 seconds. 
 
 PRACTICAL:
-CGPiO weighs 800g so travels 35cm per second on 4 fresh AA batteries.
-That's 1 meter every 2.86 seconds.
+* CGPiO weighs 800g so travels 35cm per second on 4 fresh AA batteries.
+* That's 1 meter every 2.86 seconds.
 
 #########################
 
 #Simple, functional control
-##sensorfuncs.py will expand to include other sensors beyond 4 Sharp SY0A21's.
+sensorfuncs.py will expand to include other sensors beyond 4 Sharp SY0A21's.
 
-##Motorfuncs.py holds all the main motor controls with the following functions:
+Motorfuncs.py holds all the main motor controls with the following functions:
 
 speed(x):
 set the speed of both motors together.
