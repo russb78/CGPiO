@@ -19,9 +19,8 @@ PRACTICAL:
 #########################
 
 #Simple, functional control
-sensorfuncs.py will expand to include other sensors beyond 4 Sharp SY0A21's.
-
-Motorfuncs.py holds all the main motor controls with the following functions:
+* sensorfuncs.py will expand to include other sensors beyond 4 Sharp SY0A21's.
+* Motorfuncs.py holds all the main motor controls with the following functions:
 
 speed(x):
 set the speed of both motors together.
