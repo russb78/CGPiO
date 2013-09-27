@@ -1,7 +1,7 @@
 #CGPiO
-##Copyright 2013 Russell Barnes <russell@russellbarnes.co.uk>
+Copyright 2013 Russell Barnes <russell@russellbarnes.co.uk>
 
-CGPiO is a Raspberry Pi robot I've built from the frindo.org robot platform.
+###CGPiO is a Raspberry Pi robot I've built from the frindo.org robot platform.
 This is all pretty new to me, so if you've got any tips/advice drop me a line!
 
 #########################
