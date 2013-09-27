@@ -36,21 +36,27 @@ relates to sharpness and y is the time the robot will continue to turn"""
 def high_react():
     reading = read_sensors()
     if reading[0] > high_trigger:
-        print "Left HIGH sensor warning!" 
+        print "Left HIGH sensor warning!"
+        spin_right(45)
     elif reading[1] > (high_trigger):
         print "Front HIGH sensor warning!"
         if reading[0] < reading[2]: #if left reading is smaller than right reading...
             print "Turning left"
+            spin_left(45)
         else:
             print "Turning right"
+            spin_right(45)
         if readadc(3) > high_trigger:
             new_reading = read_sensors()
             if new_reading[0] < new_reading[2]:
                 print "Spinning left"
+                spin_left(90)
             else:
                 print "Spinning right"
+                spin_right(90)
     elif reading[2] > high_trigger:
         print "Right HIGH sensor warning!"
+        spin_left(45)
     elif reading[3] > high_trigger:
         print "Rear HIGH sensor warning!"
 
@@ -60,20 +66,26 @@ def low_react():
         old_L_reading = reading[0]
         print "Left LOW sensor warning!" 
         print "Turning right a bit"
+        turn_right(35, 0.1)
         if readadc(0) > old_L_reading:
             print "Turning right a bit more"
+            turn_right(35, 0.1)
     elif reading[1] > (low_trigger):
         print "Front LOW sensor warning!"
         if reading[0] < reading[2]: #if left reading is smaller than right reading...
             print "Turning left a bit"
+            turn_left(35, 0.1)
         else:
             print "Turning right a bit"
+            turn_right(35, 0.1)
     elif reading[2] > low_trigger:
         old_R_reading = reading[0]
         print "Left LOW sensor warning!" 
         print "Turning left a bit"
+        turn_left(35, 0.1)
         if readadc(2) > old_R_reading:
             print "Turning left a bit more"
+            turn_left(35, 0.1)
     elif reading[3] > low_trigger:
         print "Rear LOW sensor warning!"
 
@@ -81,6 +93,7 @@ def main():
     try:
         while True:
             #your code goes here
+            go(100)
             low_react()
             high_react()
             reading = read_sensors()
