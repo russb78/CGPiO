@@ -1,5 +1,4 @@
-import spidev # required for the MCP3008
-from time import sleep
+import spidev # required for the MCP3008 ADC to function
 import RPi.GPIO as GPIO 
 GPIO.setmode(GPIO.BCM) # pin names (not actual pin numbers)
 
@@ -12,11 +11,6 @@ front = 1
 right = 2
 rear = 3
 
-low_trigger = 250
-high_trigger = 450
-
-#~#~#~# READ SPI DATA FROM MCP3008: 8 pins available (0 to 7) #~#~#~#
-
 def readadc(adcnum):
     """Controls the MCP3008 chip to assign 8 analog pins from 0 to 7"""
     if ((adcnum > 7) or (adcnum < 0)):
@@ -26,7 +20,7 @@ def readadc(adcnum):
     return adcout
 
 def read_sensors():
-    """Reads each of the Sharp sensors are returns a tuple of analog readings 
+    """Reads each of the Sharp sensors are returns a list of analog readings 
     (0-1024) in order: left, front, right, rear"""
     reading = []
     for i in [left, front, right, rear]:
