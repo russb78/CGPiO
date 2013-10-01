@@ -5,39 +5,41 @@ from sensorfuncs import *
 low_trigger = 250
 high_trigger = 450
 
-### Breakdown of imported functions
+### Breakdown of imported functions ###
 
+# read_sensors()
+"""Reads each of the Sharp sensors are returns a list of analog readings 
+(0-1024) in order: left, front, right, rear"""
 
-
-# speed(x):
+# speed(x)
 """set the speed of both motors together.
 0 == off - 100 == full"""
 
-# stop():
+# stop()
 """Stops your robot should you need it to"""
 
-# end():
+# end()
 """Stops the robot and cleans up the GPIO pins - use to finish your program"""
 
-# go_forward(x, y): 
+# go_forward(x, y)
 """Move the robot forward at x speed (0-100) for y seconds"""
 
-# go_back(x, y): 
+# go_back(x, y)
 """Move the robot forward at x (0-100) speed for y seconds"""
 
-# spin_right(x):
+# spin_right(x)
 """Turns robot by number of degrees (from original facing direction)
 in a range between 0 and 360 degrees to the right"""
 
-# spin_left(x):
+# spin_left(x)
 """Turns robot by number of degrees (from original facing direction)
 in a range between 0 and 360 degrees to the left"""
 
-# turn_right(x, y): 
+# turn_right(x, y)
 """Gradually turn your robot right, where x (0 == sharp turn to 100 == no turn) 
 relates to sharpness and y is the time the robot will continue to turn"""
 
-# turn_left(x, y):
+# turn_left(x, y)
 """Gradually turn your robot right, where x (0 == sharp turn to 100 == no turn) 
 relates to sharpness and y is the time the robot will continue to turn"""
 
