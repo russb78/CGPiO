@@ -1,6 +1,14 @@
 from motorfuncs import *
 from sensorfuncs import *
 
+#set low and high triggers for the sharp sensors
+low_trigger = 250
+high_trigger = 450
+
+### Breakdown of imported functions
+
+
+
 # speed(x):
 """set the speed of both motors together.
 0 == off - 100 == full"""
